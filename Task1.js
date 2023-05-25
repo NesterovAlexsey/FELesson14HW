@@ -11,7 +11,12 @@ products: [
 
 // Используя деструктуризацию пулучите в отдельную переменную значение поля author;
 
-const {products} = obj;
-const [,secondPosition] = products;
-const {author} = secondPosition;
+// Version 1
+// const {products} = obj;
+// const [,secondPosition] = products;
+// const {author} = secondPosition;
+
+// Version2
+const {products: [, {author}]} = obj;
+
 console.log(author);
